@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "605580645473",
+    "project_id": "ebank-413e9",
+    "storage_bucket": "ebank-413e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605580645473:android:684194c9fbaec770dc8620",
+        "android_client_info": {
+          "package_name": "com.revhalisi.e_banking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605580645473-m5b4saf00msoc61kqid66qk6vlitu87t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApRZ2c5aRIVkwzvtaCNW_N7rOo15etuYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605580645473-al9ujs7kden622kcevar84sss4i3fvdj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

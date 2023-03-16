@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="app_name">churchApp</string>
+    <string name="action_login">Login</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="logout">logout</string>
+    <string name="previous">Previous</string>
+    <string name="profile">profile</string>
+    <string name="calendar">calender</string>
+    <string name="home">Home</string>
+    <string name="signup">SIGN UP</string>
+    <string name="help">help</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="on">On</string>
+    <string name="get_phone_number_notification">Get phone number notification</string>
+    <string name="off">off</string>
+    <string name="toast_you_just_clicked_a_fragment">changed button toggle</string>
+    <string name="get_email_notification_monthly">get Email notification monthly</string>
+    <string name="edit">edit</string>
+
+    <string name="loginFF">LOGIN</string>
+    <string name="login_as">Login As</string>
+    <string-array name="usertype">
+        <item>
+            user
+        </item>
+        <item>
+            admin
+        </item>
+    </string-array>
+</resources>
