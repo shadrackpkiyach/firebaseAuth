@@ -140,14 +140,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.876" />
 
-    <Button
+    <TextView
         android:id="@+id/toLogin"
         android:layout_width="111dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="190dp"
         android:layout_marginTop="572dp"
         android:text="Login"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

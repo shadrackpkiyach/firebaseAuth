@@ -19,12 +19,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements  View.OnClickListener{
 
     private EditText emailTextView, passwordTextView;
     private Button Btn;
     private ProgressBar progressbar;
-
+     private TextView toRegister;
     private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,18 +39,17 @@ public class LoginActivity extends AppCompatActivity {
         passwordTextView = findViewById(R.id.inputPassword);
         Btn = findViewById(R.id.loginButton);
         progressbar = findViewById(R.id.progressB);
+         toRegister = findViewById(R.id.toRegister);
 
+        findViewById(R.id.loginButton).setOnClickListener(this);
         // Set on Click Listener on Sign-in button
-        Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                loginUserAccount();
-            }
-        });
+        findViewById(R.id.toRegister).setOnClickListener(this);
+
+
+
     }
 
-    private void loginUserAccount()
+    private void LoginUser()
     {
 
         // show the visibility of progress bar to show loading
@@ -78,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        // signin existing user
+        // signing existing user
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(
                         new OnCompleteListener<AuthResult>() {
@@ -116,5 +115,23 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                         });
+    }
+
+    private  void toRegisterPage(){
+        startActivity(new Intent(this,RegisterActivity.class));
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.loginButton:
+                LoginUser();
+                break;
+            case R.id.toRegister:
+                toRegisterPage();
+
+                break;
+        }
+
     }
 }

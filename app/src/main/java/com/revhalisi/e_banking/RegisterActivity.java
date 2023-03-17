@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-public class RegisterActivity extends AppCompatActivity  {
+public class RegisterActivity extends AppCompatActivity implements  View.OnClickListener {
 
     private EditText emailTextView, passwordTextView, nameTextView,confirmPassword,phoneNumberText;
     private Button BtnRegister;
@@ -27,8 +27,7 @@ public class RegisterActivity extends AppCompatActivity  {
     private FirebaseAuth mAuth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
@@ -45,21 +44,9 @@ public class RegisterActivity extends AppCompatActivity  {
         confirmPassword = findViewById(R.id.inputCRPassword);
         progressBar = findViewById(R.id.progressbar);
 
-        // Set on Click Listener on Registration button
-        BtnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                registerNewUser();
-            }
-        });
-        BtnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                toLoginPage();
-            }
-        });
+        findViewById(R.id.toLogin).setOnClickListener(this);
+        findViewById(R.id.RegisterButton).setOnClickListener(this);
+
     }
 
     private void registerNewUser()
@@ -131,6 +118,19 @@ public class RegisterActivity extends AppCompatActivity  {
 
     private  void toLoginPage(){
         startActivity(new Intent(this,LoginActivity.class));
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.RegisterButton:
+                registerNewUser();
+                break;
+            case R.id.toLogin:
+                toLoginPage();
+
+                break;
+        }
     }
 }
 
